@@ -37,14 +37,14 @@ namespace MvcProjeKampi.Controllers
             ValidationResult results = categoryValidator.Validate(p);
             if (results.IsValid)
             {
-                cm.CategoryAddBL(p);
+                cm.CategoryAdd(p);
                 return RedirectToAction("GetCategorList");
             }
             else
             {
                 foreach (var item in results.Errors)
                 {
-                    ModelState.AddModelError(item.PropertyName,item.ErrorCode);
+                    ModelState.AddModelError(item.PropertyName,item.ErrorMessage);
                 }
             }
             return View();
