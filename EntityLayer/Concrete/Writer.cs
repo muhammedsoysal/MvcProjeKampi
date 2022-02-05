@@ -32,11 +32,8 @@ namespace EntityLayer.Concrete
 
         [StringLength(50)]
         public string WriterTitle { get; set; }
-<<<<<<< HEAD
 
         public bool WriterStatus { get; set; }
-=======
->>>>>>> 6e07a30be204fb93d238df3638ceac869c44ee1d
         public ICollection<Heading> Headings { get; set; }
         public ICollection<Content> Contents { get; set; }
     }

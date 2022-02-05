@@ -28,7 +28,6 @@ namespace MvcProjeKampi.Controllers
                                                       Text = x.CategoryName,
                                                       Value = x.CategoryID.ToString()
                                                   }).ToList();
-<<<<<<< HEAD
 
             List<SelectListItem> valueWriter = (from x in writerManager.GetList()
                                                 select new SelectListItem
@@ -37,18 +36,7 @@ namespace MvcProjeKampi.Controllers
                                                     Value = x.WriterID.ToString()
                                                 }
                                               ).ToList();
-            ViewBag.vlc = valueCategory;
-=======
-               
-            List<SelectListItem> valueWriter = (from x in writerManager.GetList()
-                                                select new SelectListItem
-                                                {
-                                                    Text = x.WriterName +" "+x.WriterSurName ,
-                                                    Value = x.WriterID.ToString()
-                                                }
-                                              ).ToList();
            ViewBag.vlc = valueCategory;
->>>>>>> 6e07a30be204fb93d238df3638ceac869c44ee1d
             ViewBag.vlw = valueWriter;
             return View();
         }
@@ -59,7 +47,6 @@ namespace MvcProjeKampi.Controllers
             headingManager.HeadingAdd(p);
             return RedirectToAction("Index");
         }
-<<<<<<< HEAD
         [HttpGet]
         public ActionResult EditHeading(int id)
         {
@@ -73,7 +60,11 @@ namespace MvcProjeKampi.Controllers
             ViewBag.vlc = valueCategory;
             return View(headingValue);
         }
-=======
->>>>>>> 6e07a30be204fb93d238df3638ceac869c44ee1d
+        [HttpPost]
+        public ActionResult EditHeading(Heading p)
+        {
+            headingManager.HeadingUpdate(p);
+            return RedirectToAction("Index");
+        }
     }
 }
