@@ -134,7 +134,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\ContentController.cs" />
+=======
+>>>>>>> 6e07a30be204fb93d238df3638ceac869c44ee1d
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
@@ -2288,8 +2291,11 @@
     <Content Include="Views\Writer\EditWriter.cshtml" />
     <Content Include="Views\Heading\Index.cshtml" />
     <Content Include="Views\Heading\AddHeading.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Content\ContentByHeading.cshtml" />
     <Content Include="Views\Heading\EditHeading.cshtml" />
+=======
+>>>>>>> 6e07a30be204fb93d238df3638ceac869c44ee1d
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
