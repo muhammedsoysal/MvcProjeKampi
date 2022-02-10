@@ -1,0 +1,17 @@
+﻿@model EntityLayer.Concrete.Skill
+@{
+    ViewBag.Title = "AddSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddSkill", "Skill", FormMethod.Post))
+{
+    @Html.Label("Yetenek Adı")
+    @Html.TextBoxFor(x => x.SkillName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek Seviyesi")
+    @Html.TextBoxFor(x => x.SkillLevel, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-dark" >Ekle</button>
+}
+

@@ -1,4 +1,7 @@
-﻿<button class="btn btn-outline-primary" data-toggle="modal" data-target="#Modal1">
+﻿@using System.Web.UI.WebControls
+@using EntityLayer.Concrete
+@model About
+<button class="btn btn-outline-primary" data-toggle="modal" data-target="#Modal1">
     Yeni Hakkımızda Yaz Girişi
 </button>
 <div class="modal" id="Modal1">
@@ -21,10 +24,12 @@
                     <label>Hakkımda Görsel 2</label>
                     <input type="text" name="AboutImage2" class="form-control" />
                     <br />
-                    <label>Hakkımda Durum</label>
-                    <input type="text" name="AboutStatus" class="form-control" />
+                    <label>Durumu : </label>
+                    @Html.DropDownListFor(x => x.AboutStatus, new SelectListItem[]{
+                        new SelectListItem() {Text = " Aktif ", Value="true"},
+                        new SelectListItem() {Text = " Pasif ", Value="false"}},new { @class = "form-control" } )
                     <br />
-                    <button class="btn btn-outline-info">Kaydet</button>
+                    <button class="btn btn-outline-primary">Kaydet</button>
                 </div>
             </form>
         </div>

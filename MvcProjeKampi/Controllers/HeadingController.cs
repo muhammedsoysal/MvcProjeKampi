@@ -36,7 +36,7 @@ namespace MvcProjeKampi.Controllers
                                                     Value = x.WriterID.ToString()
                                                 }
                                               ).ToList();
-           ViewBag.vlc = valueCategory;
+            ViewBag.vlc = valueCategory;
             ViewBag.vlw = valueWriter;
             return View();
         }
@@ -76,7 +76,7 @@ namespace MvcProjeKampi.Controllers
             else if (headingValue.HeadingStatus == false)
             {
                 headingValue.HeadingStatus = true;
-            }   
+            }
             headingManager.HeadingDelete(headingValue);
             return RedirectToAction("Index");
         }

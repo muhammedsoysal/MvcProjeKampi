@@ -143,12 +143,14 @@
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\WriterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Roles\AdminRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2017,6 +2019,17 @@
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.js" />
     <Content Include="AdminLTE-3.0.4\starter.html" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\css\style.css" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\images\5.jpg" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\images\img.jpeg" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\images\img1.jpg" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\images\sprite.png" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\index.html" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\js\bars.js" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\js\easyResponsiveTabs.js" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\js\jquery-1.11.1.min.js" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\js\jquery.circlechart.js" />
+    <Content Include="AdminLTE-3.0.4\YeteneklerTeması\w3layouts-License.txt" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -2397,6 +2410,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="SS\Skill1.png" />
+    <Content Include="SS\Skill2.png" />
+    <Content Include="SS\Skill3.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2443,11 +2459,14 @@
     <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
+    <Content Include="Views\Skill\List.cshtml" />
+    <Content Include="Views\Skill\AddSkill.cshtml" />
+    <Content Include="Views\Skill\EditSkill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
