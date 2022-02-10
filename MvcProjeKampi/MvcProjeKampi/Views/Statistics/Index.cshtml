@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>İstatistiklerimiz</h2>
+<br />
+<html>
+<head>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="small-box bg-cyan" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">Toplam Kategori Sayısı</sup>
+                    <br />
+                    <span style="font-size:50px"> @ViewBag.ToplamKategoriSayisi </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-gradient-green" style="max-height:150px">
+                <div class="inner" style="text-align:center">
+                    <br />
+                    <sup style="font-size:20px">Yazılım Kategorisi Başlık Sayısı</sup>
+                    <br />
+                    <span style="font-size:50px">@ViewBag.ToplamYazilimKategorisi</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-gradient-indigo" style="max-height:150px">
+                <div class="inner" style="text-align:center">
+                    <br />
+                    <sup style="font-size:20px">Yazar adında "a" harfi geçen Yazar sayısı</sup>
+                    <br />
+                    <span style="font-size:50px">@ViewBag.SartiYazarAdları</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-danger" style="max-height:150px">
+                <div class="inner" style="text-align:center">
+                    <br />
+                    <sup style="font-size:25px">En Fazla Başlığa Sahip Kategori</sup>
+                    <br />
+                    <span style="font-size:50px">@ViewBag.EnFazlaBaslik</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-fuchsia" style="max-height:150px">
+                <div class="inner"style="text-align:center">
+                    <br />
+                    <sup style="font-size:25px">Aktif Olan Kategori Sayısı</sup>
+                    <br />
+                    <span style="font-size:50px">@ViewBag.AktifKategoriler</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
