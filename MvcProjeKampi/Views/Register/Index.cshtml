@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Admin
+@{
+    Layout = null;
+}
+
+<br />
+@using (Html.BeginForm("AddAdmin", "Authorization", FormMethod.Post))
+{
+    @Html.Label("Admin Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.AdminUserName, new { @class = "form-control" })
+    <br />
+    @Html.Label("Admin Şifre")
+    @Html.TextBoxFor(x => x.AdminPassword, new { @class = "form-control" })
+    <br />
+    @Html.Label("Admin Rol")
+    <select name="AdminRole" id="AdminRole  " class="form-control">
+        <option value="A">A</option>
+        <option value="B">B</option>
+    </select>
+    <br />
+    @Html.Label("Durumu")
+    @Html.DropDownListFor(x => x.AdminStatus, new SelectListItem[]{
+            new SelectListItem(){Text="Aktif",Value="True"},
+            new SelectListItem(){Text="Aktif",Value="False"} }, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-secondary" style="width: 100%;">Ekle</button>
+}

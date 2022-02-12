@@ -134,6 +134,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminCategoryController.cs" />
+    <Compile Include="Controllers\AuthorizationController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
@@ -2410,6 +2411,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="SS\AdminEkleme.png" />
+    <Content Include="SS\AdminGüncelleme.png" />
+    <Content Include="SS\AdminListesipng.png" />
+    <Content Include="SS\AdminSifreHash.png" />
     <Content Include="SS\Skill1.png" />
     <Content Include="SS\Skill2.png" />
     <Content Include="SS\Skill3.png" />
@@ -2452,7 +2457,6 @@
     <Content Include="Views\Contact\GetContactDetails.cshtml" />
     <Content Include="Views\Contact\MessageListMenu.cshtml" />
     <Content Include="Views\Message\Inbox.cshtml" />
-    <Content Include="Views\Message\Sendbox.cshtml" />
     <Content Include="Views\Message\NewMessage.cshtml" />
     <Content Include="Views\Message\GetInboxMessageDetails.cshtml" />
     <Content Include="Views\Message\GetSendboxMessageDetails.cshtml" />
@@ -2463,6 +2467,11 @@
     <Content Include="Views\Skill\List.cshtml" />
     <Content Include="Views\Skill\AddSkill.cshtml" />
     <Content Include="Views\Skill\EditSkill.cshtml" />
+    <Content Include="Views\Authorization\Index.cshtml" />
+    <Content Include="Views\Authorization\AddAdmin.cshtml" />
+    <Content Include="Views\Authorization\EditAdmin.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
+    <Content Include="Views\Message\Sendbox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

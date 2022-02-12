@@ -46,7 +46,15 @@
                                 <div class="w-100 text-md-right">
                                     <a href="#">Şifremi Unuttum</a>
                                 </div>
-                            </div>
+                            </div>  
+                            if (ViewBag.ErrorMessage!=null)
+                            {
+                                <div class="text-center" style="margin-bottom:15px">
+                                    <a class="text-danger">
+                                        @ViewBag.ErrorMessage
+                                    </a>
+                                </div>
+                            }
                             <div class="form-group">
                                 <button type="submit" class="btn form-control btn-primary rounded submit px-3">Giriş Yap</button>
                             </div>
