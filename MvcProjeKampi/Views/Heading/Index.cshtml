@@ -1,5 +1,7 @@
 ﻿@using EntityLayer.Concrete
-@model List<Heading>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Heading>
 @{ ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
 @{ string color = ""; }
@@ -93,7 +95,7 @@
                 <td>
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <img alt="Avatar" class="table-avatar" src="@item.Writer.WriterImage">
+                            <a style="font-size:unset"> <img alt="Avatar" class="table-avatar" src="@item.Writer.WriterImage"> @item.Writer.WriterName @item.Writer.WriterSurName</a>
                         </li>
                     </ul>
                 </td>
@@ -119,7 +121,7 @@ break;
                     </a>
                     <a class="btn btn-info btn-sm" href="/Heading/EditHeading/@item.HeadingID">
                         <i class="fas fa-pencil-alt">
-                        </i>    
+                        </i>
                         Düzenle
                     </a>
                     @if (item.HeadingStatus == true)
@@ -147,24 +149,8 @@ else
     </section>
 </body>
 </html>
-
-
-@*<h2>Index</h2>
-    <br />
-    <table class="table table-bordered">
-        <tr>
-            <th>ID</th>
-            <th>Başlık</th>
-            <th>Kategori</th>
-        </tr>
-        @foreach(var item in Model)
-        {
-            <tr>
-                <td>@item.HeadingID</td>
-                <td>@item.HeadingName</td>
-                <td>@item.Category.CategoryName</td>
-            </tr>
-        }
-    </table>
-    <br />
-    <a href="/Heading/AddHeading" class="btn btn-info">Yeni başlık Girişi</a>*@
+@Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+    {"page-link"}
+})

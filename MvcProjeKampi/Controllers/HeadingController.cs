@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -14,7 +16,12 @@ namespace MvcProjeKampi.Controllers
         HeadingManager headingManager = new HeadingManager(new EfHeadingDal());
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         WriterManager writerManager = new WriterManager(new EfWriterDal());
-        public ActionResult Index()
+        public ActionResult Index(int p=1)
+        {
+            var headingValues = headingManager.GetList().ToPagedList(p, 10);
+            return View(headingValues);
+        }
+        public ActionResult HeadingReport()
         {
             var headingValues = headingManager.GetList();
             return View(headingValues);

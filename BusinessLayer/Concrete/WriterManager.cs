@@ -1,4 +1,4 @@
-﻿using BusinessLayer.Abstract;
+﻿ using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
 using System;
@@ -26,6 +26,21 @@ namespace BusinessLayer.Concrete
         public List<Writer> GetList()
         {
             return _writerDal.List();
+        }
+
+        public List<Writer> GetListActive()
+        {
+          return  _writerDal.List(x => x.WriterStatus == true);
+        }
+
+        public List<Writer> GetListPassive()
+        {
+            return _writerDal.List(x => x.WriterStatus == false);
+        }
+
+        public Writer GetUserByMail(string mail)
+        {
+            return _writerDal.Get(x => x.WriterMail == mail);
         }
 
         public void WriterAdd(Writer writer)

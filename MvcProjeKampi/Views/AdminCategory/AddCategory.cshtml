@@ -1,19 +1,28 @@
 ﻿@model EntityLayer.Concrete.Category
-@{
-    ViewBag.Title = "AddCategory";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
+@{ ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
 @using (Html.BeginForm("AddCategory", "AdminCategory", FormMethod.Post))
 {
-    <div class="form-group">
-        @Html.Label("Kategori Ad")
-        @Html.TextBoxFor(x => x.CategoryName,new { @class = "form-control" })
-        @Html.ValidationMessageFor(X => X.CategoryName)
-        <br />
-        @Html.Label("Açıklamayı Yazınız")
-        @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
-        @Html.ValidationMessageFor(X => X.CategoryDescription)
-        <br />
-        <button class="btn btn-outline-info">Kaydet</button>
-    </div>
-    }
+<div class="form-group">
+    @Html.Label("Kategori Ad")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(X => X.CategoryName)
+    <br />
+    @Html.Label("Açıklamayı Yazınız")
+    @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
+    @Html.ValidationMessageFor(X => X.CategoryDescription)
+    <br />
+    <button class="btn btn-outline-info" id="buton">Kaydet</button>
+</div>}
+<script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
+<script>
+    $('#buton').click(function () {
+        swal("Başarılı!", "Kategori Ekleme İşlemi Başarılı.", "success"), function () {
+            location.reload();
+            tr.hide();
+        };
+    });
+</script>

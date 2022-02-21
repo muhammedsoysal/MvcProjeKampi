@@ -20,12 +20,14 @@ namespace MvcProjeKampi.Controllers
         [Authorize]
         public ActionResult Inbox()
         {
-            var messageList = messageManager.GetListInbox();
+            string p = (string)Session["WriterMail"];
+            var messageList = messageManager.GetListInbox(p);
             return View(messageList);
         }
         public ActionResult Sendbox()
         {
-            var messageList = messageManager.GetListSendBox();
+            string p = (string)Session["WriterMail"];
+            var messageList = messageManager.GetListSendBox(p);
             return View(messageList);
         }
         public ActionResult GetInboxMessageDetails(int id)

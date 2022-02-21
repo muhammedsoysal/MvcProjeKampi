@@ -7,15 +7,15 @@
 @using (Html.BeginForm("EditAdmin", "Authorization", FormMethod.Post))
 {
     <div class="form-group">
-        @Html.Label("Admin ID")
-        @Html.TextBoxFor(x => x.AdminID, new { @class = "form-control" })
-       <br />
+        @*@Html.Label("Admin ID")*@
+        @Html.HiddenFor(x => x.AdminID, new { @class = "form-control" })
+<br />
         @Html.Label("Admin Kullanıcı Adı")
         @Html.TextBoxFor(x => x.AdminUserName, new { @class = "form-control" })
-        <br />
-        @Html.Label("Admin Şifre")
-        @Html.TextBoxFor(x => x.AdminPassword, new { @class = "form-control" })
-        <br />
+        
+        @*@Html.Label("Admin Şifre")*@
+        @Html.HiddenFor(x => x.AdminPassword, new { @class = "form-control" })
+
         @Html.Label("Admin Rol")
         <select name="AdminRole" id="AdminRole  " class="form-control">
             <option value="A">A</option>
